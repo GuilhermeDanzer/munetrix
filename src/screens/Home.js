@@ -5,9 +5,9 @@ import { MyWrapper } from "../styles/wrapperStyles"
 const Home = () => {
   const [employees, setEmployees] = useState([])
   const [error, setError] = useState("")
+
   const handleRequest = async () => {
     const [data, error] = await getEmployees()
-    console.log("data", data)
     if (data) {
       setEmployees(data)
     } else {

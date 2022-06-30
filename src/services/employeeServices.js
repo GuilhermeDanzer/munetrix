@@ -4,7 +4,6 @@ export const getEmployees = async () => {
     const {
       data: { data },
     } = await api.get("/employees")
-    console.log("data response", data)
     return [data, ""]
   } catch (error) {
     console.log(error)
